@@ -36,7 +36,8 @@
 		],
 		"nodes": [
 			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js"
+			"dist/nodes/Example/Example.node.js",
+			"dist/nodes/LiteParse/LiteParse.node.js"
 		]
 	},
 	"devDependencies": {
@@ -48,5 +49,8 @@
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"@llamaindex/liteparse": "^1.5.3"
 	}
 }
