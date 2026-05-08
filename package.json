@@ -1,56 +1,43 @@
 {
-	"name": "n8n-nodes-<...>",
-	"version": "0.1.0",
-	"description": "",
-	"license": "MIT",
-	"homepage": "",
-	"keywords": [
-		"n8n-community-node-package"
-	],
-	"author": {
-		"name": "",
-		"email": ""
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
-	},
+    "name": "n8n-nodes-liteparse",
+    "version": "0.1.1",
+	"type": "module",
+    "description": "n8n node for LiteParse - local document parsing",
+    "license": "MIT",
+    "homepage": "",
+    "keywords": [
+        "n8n-community-node-package"
+    ],
+    "author": {
+        "name": "Diyar Daruish",
+        "email": "diyardaruish4@icloud.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kxrdz/n8n-nodes-liteparse.git"
+    },
 	"scripts": {
-		"build": "n8n-node build",
-		"build:watch": "tsc --watch",
-		"dev": "n8n-node dev",
-		"lint": "n8n-node lint",
-		"lint:fix": "n8n-node lint --fix",
-		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"build": "esbuild nodes/LiteParse/LiteParse.node.ts --bundle --platform=node --format=esm --outfile=dist/nodes/LiteParse/LiteParse.node.js --external:n8n-workflow",
+		"prepublishOnly": "npm run build"
 	},
-	"files": [
-		"dist"
-	],
-	"n8n": {
-		"n8nNodesApiVersion": 1,
-		"strict": true,
-		"credentials": [
-			"dist/credentials/GithubIssuesApi.credentials.js",
-			"dist/credentials/GithubIssuesOAuth2Api.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js",
-			"dist/nodes/LiteParse/LiteParse.node.js"
-		]
-	},
-	"devDependencies": {
-		"@n8n/node-cli": "*",
-		"eslint": "9.39.4",
-		"prettier": "3.8.3",
-		"release-it": "20.0.1",
-		"typescript": "5.9.3"
-	},
-	"peerDependencies": {
-		"n8n-workflow": "*"
-	},
-	"dependencies": {
-		"@llamaindex/liteparse": "^1.5.3"
-	}
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "credentials": [],
+        "nodes": [
+            "dist/nodes/LiteParse/LiteParse.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "^0.29.1",
+        "@llamaindex/liteparse": "^1.5.3",
+        "esbuild": "*",
+        "typescript": "5.9.3"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    },
+    "dependencies": {}
 }
