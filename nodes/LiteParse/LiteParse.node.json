@@ -1,0 +1,13 @@
+{
+  "node": "n8n-nodes-liteparse",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["AI", "Developer Tools"],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://github.com/run-llama/liteparse"
+      }
+    ]
+  }
+}
