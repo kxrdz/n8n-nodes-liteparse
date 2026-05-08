@@ -1,7 +1,7 @@
 {
     "name": "n8n-nodes-liteparse",
-    "version": "0.1.1",
-	"type": "module",
+    "version": "0.1.2",
+    "type": "module",
     "description": "n8n node for LiteParse - local document parsing",
     "license": "MIT",
     "homepage": "",
@@ -16,10 +16,10 @@
         "type": "git",
         "url": "https://github.com/kxrdz/n8n-nodes-liteparse.git"
     },
-	"scripts": {
-		"build": "esbuild nodes/LiteParse/LiteParse.node.ts --bundle --platform=node --format=esm --outfile=dist/nodes/LiteParse/LiteParse.node.js --external:n8n-workflow",
-		"prepublishOnly": "npm run build"
-	},
+    "scripts": {
+        "build": "esbuild nodes/LiteParse/LiteParse.node.ts --bundle --platform=node --format=esm --outfile=dist/nodes/LiteParse/LiteParse.node.js --external:n8n-workflow",
+        "prepublishOnly": "npm run build"
+    },
     "files": [
         "dist"
     ],
