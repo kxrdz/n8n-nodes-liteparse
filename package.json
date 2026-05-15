@@ -31,7 +31,7 @@
         ]
     },
     "devDependencies": {
-        "@n8n/node-cli": "^0.29.1",
+        "@n8n/node-cli": "^0.30.1",
         "@llamaindex/liteparse": "^1.5.3",
         "esbuild": "*",
         "typescript": "5.9.3"
